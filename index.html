@@ -10,5 +10,180 @@
   </head>
   <body>
     <div id="root"></div>
+
+    <!-- ===== Footer ===== -->
+    <style>
+      .ma-footer {
+        --ma-bg: #0f2a3d;
+        --ma-text: #e8eef3;
+        --ma-muted: #9fb3c2;
+        --ma-accent: #3fb6a8;
+        --ma-line: rgba(255, 255, 255, 0.12);
+        background: var(--ma-bg);
+        color: var(--ma-text);
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        border-top: 3px solid var(--ma-accent);
+        box-sizing: border-box;
+        width: 100%;
+        text-align: left;
+      }
+      .ma-footer *,
+      .ma-footer *::before,
+      .ma-footer *::after {
+        box-sizing: border-box;
+      }
+      .ma-footer__inner {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 20px 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+      }
+      .ma-footer__profile {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        min-width: 0;
+      }
+      .ma-footer__avatar {
+        width: 56px;
+        height: 56px;
+        flex: 0 0 56px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid var(--ma-accent);
+        background: var(--ma-line);
+      }
+      .ma-footer__name {
+        margin: 0;
+        font-size: 1.05rem;
+        font-weight: 700;
+        line-height: 1.3;
+        color: #fff;
+      }
+      .ma-footer__role {
+        margin: 2px 0 0;
+        font-size: 0.85rem;
+        line-height: 1.45;
+        color: var(--ma-muted);
+      }
+      .ma-footer__links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        flex: 0 0 auto;
+      }
+      .ma-footer__link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 9px 16px;
+        border: 1px solid var(--ma-line);
+        border-radius: 999px;
+        color: var(--ma-text);
+        font-size: 0.9rem;
+        font-weight: 500;
+        text-decoration: none;
+        transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+      }
+      .ma-footer__link svg {
+        width: 18px;
+        height: 18px;
+        fill: currentColor;
+        flex: 0 0 18px;
+      }
+      .ma-footer__link:hover {
+        background: var(--ma-accent);
+        border-color: var(--ma-accent);
+        color: #0b1d2a;
+      }
+      .ma-footer__link:focus-visible {
+        outline: 2px solid var(--ma-accent);
+        outline-offset: 3px;
+      }
+      .ma-footer__bottom {
+        border-top: 1px solid var(--ma-line);
+        padding: 12px 24px;
+        text-align: center;
+        font-size: 0.78rem;
+        color: var(--ma-muted);
+      }
+
+      @media (max-width: 720px) {
+        .ma-footer__inner {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          padding: 24px 16px 20px;
+        }
+        .ma-footer__profile {
+          flex-direction: column;
+          text-align: center;
+        }
+        .ma-footer__avatar {
+          width: 64px;
+          height: 64px;
+          flex-basis: 64px;
+        }
+        .ma-footer__links {
+          justify-content: center;
+          width: 100%;
+        }
+        .ma-footer__link {
+          flex: 1 1 140px;
+          justify-content: center;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .ma-footer__link {
+          transition: none;
+        }
+      }
+    </style>
+
+    <footer class="ma-footer">
+      <div class="ma-footer__inner">
+        <div class="ma-footer__profile">
+          <img
+            class="ma-footer__avatar"
+            src="https://media.licdn.com/dms/image/v2/D4E03AQExKbtS6U5cfg/profile-displayphoto-crop_800_800/B4EZ_GKJTDIsAM-/0/1785735978937?e=1796256000&v=beta&t=b9rkrpNUG2PLnTjgAjkPPDbiVkQdSPC2_iVVAN9jyKU"
+            alt="Mohamed Assad"
+            width="56"
+            height="56"
+            loading="lazy"
+            referrerpolicy="no-referrer"
+          />
+          <div>
+            <p class="ma-footer__name">Mohamed Assad</p>
+            <p class="ma-footer__role">B2B Marketing - Flexible Packaging Strategist &amp; Costing Expert</p>
+          </div>
+        </div>
+
+        <nav class="ma-footer__links" aria-label="Contact links">
+          <a
+            class="ma-footer__link"
+            href="https://www.linkedin.com/in/mohamed-assad-%D9%85%D8%AD%D9%85%D8%AF-%D8%A3%D8%B3%D8%B9%D8%AF-308159a4/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+            LinkedIn
+          </a>
+          <a class="ma-footer__link" href="mailto:Mohasad1993@gmail.com">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.2-8 5-8-5V6l8 5 8-5v2.2z"/></svg>
+            Email
+          </a>
+        </nav>
+      </div>
+      <div class="ma-footer__bottom">
+        &copy; <span id="ma-year">2026</span> Mohamed Assad. All rights reserved.
+      </div>
+      <script>
+        document.getElementById("ma-year").textContent = new Date().getFullYear();
+      </script>
+    </footer>
+    <!-- ===== /Footer ===== -->
   </body>
 </html>
