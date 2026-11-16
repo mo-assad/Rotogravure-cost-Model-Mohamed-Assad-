@@ -7,13 +7,28 @@
     <title>Vite + React</title>
     <script type="module" crossorigin src="./assets/index-CZueq2tG.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index-DVoRE-ch.css" />
-  </head>
-  <body>
-    <div id="root"></div>
-
-    <!-- ===== Footer ===== -->
+    
+    <!-- تنسيقات لضبط ارتفاع الصفحة وثبات الـ Footer في الأسفل تماماً -->
     <style>
+      html, body {
+        height: auto !important;
+        min-height: 100vh !important;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+      }
+      #root {
+        flex: 1 0 auto !important;
+        position: relative !important;
+        height: auto !important;
+      }
       .ma-footer {
+        flex-shrink: 0 !important;
+        position: relative !important;
+        width: 100% !important;
+        margin-top: 40px !important;
+        z-index: 10 !important;
         --ma-bg: #0f2a3d;
         --ma-text: #e8eef3;
         --ma-muted: #9fb3c2;
@@ -24,7 +39,6 @@
         font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
         border-top: 3px solid var(--ma-accent);
         box-sizing: border-box;
-        width: 100%;
         text-align: left;
       }
       .ma-footer *,
@@ -142,7 +156,11 @@
         }
       }
     </style>
+  </head>
+  <body>
+    <div id="root"></div>
 
+    <!-- ===== Footer ===== -->
     <footer class="ma-footer">
       <div class="ma-footer__inner">
         <div class="ma-footer__profile">
