@@ -14,6 +14,6 @@ This tool is developed and maintained by **Mohamed Assad**.
 
 If you have any inquiries, suggestions, or want to collaborate regarding flexible packaging strategies, costing tools, or B2B solutions, feel free to reach out:
 
-* **LinkedIn:** [[Your LinkedIn Profile URL](https://www.linkedin.com/in/mohamed-assad-%D9%85%D8%AD%D9%85%D8%AF-%D8%A3%D8%B3%D8%B9%D8%AF-308159a4/)]
-* **Email:** [mOHASAD1993@gmail.com]
+* **LinkedIn:**(https://www.linkedin.com/in/mohamed-assad-%D9%85%D8%AD%D9%85%D8%AF-%D8%A3%D8%B3%D8%B9%D8%AF-308159a4/)]
+* **Email:** [mohasad1993@gmail.com]
 * **Website / Network:** [PackagingMarket.net ]
